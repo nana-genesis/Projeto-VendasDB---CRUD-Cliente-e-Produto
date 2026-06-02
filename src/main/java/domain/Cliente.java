@@ -6,6 +6,7 @@ public class Cliente {
     private String codigo;
     private String telefone;
     private String email;
+    private String cpf;
 
     public Cliente() {}
 
@@ -14,6 +15,11 @@ public class Cliente {
         this.codigo = codigo;
         this.telefone = telefone;
         this.email = email;
+    }
+
+    public Cliente(String nome, String codigo, String telefone, String email, String cpf) {
+        this(nome, codigo, telefone, email);
+        this.cpf = cpf;
     }
 
     public Long getId() { return id; }
@@ -26,6 +32,8 @@ public class Cliente {
     public void setTelefone(String telefone) { this.telefone = telefone; }
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
+    public String getCpf() { return cpf; }
+    public void setCpf(String cpf) { this.cpf = cpf; }
 
     @Override
     public String toString() {
@@ -35,6 +43,7 @@ public class Cliente {
                 ", codigo='" + codigo + '\'' +
                 ", telefone='" + telefone + '\'' +
                 ", email='" + email + '\'' +
+                ", cpf='" + cpf + '\'' +
                 '}';
     }
 }
